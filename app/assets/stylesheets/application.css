@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+/*top.html.erb*/
+.headline{
+	padding-left: 20px;
+	font-size: 30px;
+}
+
+.text-headline{
+	padding-left: 50px;
+	font-size: 15px;
+	line-height:60px;
+}
+
+.text-headline span{
+	font-weight:bold;
+}
+.tag-headline{
+	padding-left: 50px;
+	font-size: 15px;
+}
