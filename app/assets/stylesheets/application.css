@@ -33,3 +33,13 @@
 	padding-left: 50px;
 	font-size: 15px;
 }
+
+/*index.html.erb*/
+.message-error{
+	color: red
+}
+/*show.html.erb*/
+.message-success{
+	color:green;
+}
+
