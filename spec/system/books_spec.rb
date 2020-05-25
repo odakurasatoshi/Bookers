@@ -30,11 +30,12 @@ describe '投稿のテスト' do
             Book.create(title:'hoge'+i.to_s,body:'body'+i.to_s)
           end
           visit books_path
-          Book.all.each_with_index do |book,i|
+          Book.all.order(created_at: :desc).each_with_index do |book,i|
             j = i * 3
             expect(page).to have_content book.title
             expect(page).to have_content book.body
             # Showリンク
+            # binding.pry
             show_link = find_all('a')[j]
             expect(show_link.native.inner_text).to match(/show/i)
             expect(show_link[:href]).to eq book_path(book)
